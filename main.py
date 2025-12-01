@@ -30,8 +30,8 @@ def euron_helper(doc):
     del doc["_id"]
     return doc
 
-@app.get("/euron/getdata")
-async def get_euron_data():
+@app.get("/euron/showdata")
+async def show_euron_data():
     items = []
     cursor = euron_coll.find({})
     async for documents in cursor:
